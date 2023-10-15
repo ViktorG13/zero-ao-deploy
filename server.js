@@ -3,6 +3,8 @@ import { fastify } from "fastify";
 import { DatabasePostgres } from "./database-postgres.js";
 
 const PORT = process.env.PORT ?? 3333;
+const HOST = '0.0.0.0'
+
 const server = fastify();
 
 // const database = new DatabaseMemory();
@@ -42,4 +44,4 @@ server.delete("/videos/:id", async (req, reply) => {
   return reply.status(204).send();
 });
 
-server.listen({port: PORT});
+server.listen({port: PORT, host: HOST});

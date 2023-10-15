@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "clear && echo starting the server && node --watch --no-warnings server.js && echo closing the server"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
